@@ -1,15 +1,23 @@
 import os
 from django.db import models
 from django.contrib.auth.models import User
-from PyJaMa.settings import MEDIA_ROOT,PROJETO_MEDIA
+from PyJaMa.settings import PROJETO_MEDIA
 
 class Cliente(models.Model):
+
+    def __unicode__(self):
+        return self.nome
+
     nome=models.CharField(max_length=255)
     foto=models.ImageField("Logo Cliente",upload_to=os.path.join(PROJETO_MEDIA,"cliente"),blank=True,null=True)
     status=models.BooleanField(blank=False,null=False)
     data_criacao=models.DateTimeField()
 
 class  Projeto(models.Model):
+
+    def __unicode__(self):
+        return self.nome
+
     cliente=models.ForeignKey(Cliente)
     nome=models.CharField(max_length=255)
     descricao=models.TextField(null=True)
@@ -19,22 +27,34 @@ class  Projeto(models.Model):
     data_criacao=models.DateTimeField()
 
 class statusTarefa(models.Model):
+    def __unicode__(self):
+        return self.nome
+
     nome=models.CharField(max_length=255)
     
 class Prioridade(models.Model):
+    def __unicode__(self):
+        return self.nome
+
     nome=models.CharField(max_length=255)
 
 class tipoTarefa(models.Model):
+    def __unicode__(self):
+        return self.nome
+
     nome=models.CharField(max_length=255,null=False)
     
 class Meta(models.Model):
+    def __unicode__(self):
+        return self.nome
+
     nome=models.CharField(max_length=255)
     descricao=models.TextField(null=True)
-    
-class Documento(models.Model):
-    nome=models.CharField(max_length=255)
 
 class Tarefa(models.Model):
+    def __unicode__(self):
+        return self.nome
+
     nome=models.CharField(max_length=255)
     descricao=models.TextField()
     tipo_tarefa=models.ForeignKey(tipoTarefa)
@@ -47,7 +67,18 @@ class Tarefa(models.Model):
     data_criacao=models.DateTimeField()
     data_fechamento=models.DateTimeField(null=True)
 
-class Reuniao(models.Model):
+class Documento(models.Model):
+    def __unicode__(self):
+        return self.nome
+
+    tarefa=models.ForeignKey(Tarefa,null=True,blank=True)
+    nome=models.CharField(max_length=255)
+    caminho=models.FileField("Documento",upload_to=os.path.join(PROJETO_MEDIA,"documentos"),null=True)
+
+class Reuniao (models.Model):
+    def __unicode__(self):
+        return self.local
+
     participantes=models.ManyToManyField(User,verbose_name="Participantes",related_name='part +')
     projeto=models.ForeignKey(Projeto,null=True)
     tarefas=models.ManyToManyField(Tarefa,verbose_name="Tarefas em Pauta",related_name='tar +',null=True)

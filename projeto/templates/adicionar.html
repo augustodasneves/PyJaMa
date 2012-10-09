@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% block corpo %}
+    <form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Adiciona {{ form.__str__ }}</button>
+    </form>
+{% endblock %}
