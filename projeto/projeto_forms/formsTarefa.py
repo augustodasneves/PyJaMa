@@ -1,23 +1,22 @@
 from django import forms
-from django.conf.global_settings import FILE_UPLOAD_TEMP_DIR
-from django.forms import Select
-from PyJaMa.settings import PROJETO_MEDIA
-from projeto.models import Tarefa
+from projeto.models import Tarefa, statusTarefa, Prioridade, tipoTarefa, Meta, Documento
 
-class formStatusTarefa(forms.Form):
-    nome=forms.CharField(max_length=255)
+class formStatusTarefa(forms.ModelForm):
+    class Meta():
+        model=statusTarefa
 
-class formPrioridade(forms.Form):
-    nome=forms.CharField(max_length=255)
+class formPrioridade(forms.ModelForm):
+    class Meta():
+        model=Prioridade
 
-class formTipoTarefa(forms.Form):
-    nome=forms.CharField(max_length=255)
+class formTipoTarefa(forms.ModelForm):
+    class Meta():
+        model=tipoTarefa
 
-class formMeta(forms.Form):
-    nome=forms.CharField(max_length=255)
-    descricao=forms.CharField()
+class formMeta(forms.ModelForm):
+    class Meta():
+        model=Meta
 
-class formDocumento(forms.Form):
-    nome=forms.CharField(max_length=255)
-    caminho=forms.FileField()
-    tarefa=forms.IntegerField(widget=forms.Select(choices=Tarefa.objects.all().values_list('id','nome')))
+class formDocumento(forms.ModelForm):
+    class Meta():
+        model=Documento

@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from PyJaMa.settings import PROJETO_MEDIA
 
 class Cliente(models.Model):
-
     def __unicode__(self):
         return self.nome
 
@@ -14,7 +13,6 @@ class Cliente(models.Model):
     data_criacao=models.DateTimeField()
 
 class  Projeto(models.Model):
-
     def __unicode__(self):
         return self.nome
 

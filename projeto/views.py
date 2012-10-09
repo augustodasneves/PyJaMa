@@ -4,6 +4,9 @@ from django.template import RequestContext
 from models import Documento,Tarefa,statusTarefa
 from projeto_forms.formsTarefa import formDocumento,formStatusTarefa
 
+def index(request):
+    return HttpResponse("teste")
+
 '''TAREFA'''
 def adicionarStatusTarefa(request):
     if request.method=="POST":
