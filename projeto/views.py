@@ -8,7 +8,7 @@ def index(request):
     return HttpResponse("teste")
 
 '''TAREFA'''
-def adicionarStatusTarefa(request):
+def adicionar(request,nameForm):
     if request.method=="POST":
         form=formStatusTarefa(request.POST,request.FILES)
 
