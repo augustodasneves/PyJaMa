@@ -1378,5 +1378,306 @@
       <column name="PROCESSLIST_ID" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="NAME" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12" />
     </table>
+    <table name="auth_group" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="80" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="group_id_refs_id_3cea63fe" columns="" />
+      <exported-key name="group_id_refs_id_f116770" columns="" />
+      <index name="name" unique="true" columns="name" />
+    </table>
+    <table name="auth_group_permissions" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="group_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="permission_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="group_id_refs_id_3cea63fe" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="permission_id_refs_id_5886d21f" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="group_id" unique="true" columns="permission_id" />
+      <index name="auth_group_permissions_425ae3c4" unique="false" columns="group_id" />
+      <index name="auth_group_permissions_1e014c8f" unique="false" columns="permission_id" />
+    </table>
+    <table name="auth_permission" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" />
+      <column name="content_type_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="codename" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="content_type_id_refs_id_728de91f" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="permission_id_refs_id_5886d21f" columns="" />
+      <exported-key name="permission_id_refs_id_67e79cb" columns="" />
+      <index name="content_type_id" unique="true" columns="codename" />
+      <index name="auth_permission_1bb8f392" unique="false" columns="content_type_id" />
+    </table>
+    <table name="auth_user" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="username" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12" />
+      <column name="first_name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="75" precision="0" nullable="false" jdbcType="12" />
+      <column name="password" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12" />
+      <column name="is_staff" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_active" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_superuser" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" />
+      <column name="last_login" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="date_joined" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="user_id_refs_id_7ceef80f" columns="" />
+      <exported-key name="user_id_refs_id_dfbab7d" columns="" />
+      <exported-key name="user_id_refs_id_c8665aa" columns="" />
+      <exported-key name="proprietario_id_refs_id_5539e48e" columns="" />
+      <exported-key name="user_id_refs_id_182a7aa8" columns="" />
+      <exported-key name="proprietario_id_refs_id_7d220627" columns="" />
+      <exported-key name="user_id_refs_id_1f25f84c" columns="" />
+      <index name="username" unique="true" columns="username" />
+    </table>
+    <table name="auth_user_groups" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="group_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="group_id_refs_id_f116770" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="user_id_refs_id_7ceef80f" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="user_id" unique="true" columns="group_id" />
+      <index name="auth_user_groups_403f60f" unique="false" columns="user_id" />
+      <index name="auth_user_groups_425ae3c4" unique="false" columns="group_id" />
+    </table>
+    <table name="auth_user_user_permissions" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="permission_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="permission_id_refs_id_67e79cb" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="user_id_refs_id_dfbab7d" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="user_id" unique="true" columns="permission_id" />
+      <index name="auth_user_user_permissions_403f60f" unique="false" columns="user_id" />
+      <index name="auth_user_user_permissions_1e014c8f" unique="false" columns="permission_id" />
+    </table>
+    <table name="django_admin_log" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="action_time" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="content_type_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="object_id" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="true" jdbcType="-1" />
+      <column name="object_repr" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12" />
+      <column name="action_flag" sqlType="SMALLINT UNSIGNED" length="5" precision="0" nullable="false" jdbcType="5" />
+      <column name="change_message" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="false" jdbcType="-1" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="content_type_id_refs_id_288599e6" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="user_id_refs_id_c8665aa" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="django_admin_log_403f60f" unique="false" columns="user_id" />
+      <index name="django_admin_log_1bb8f392" unique="false" columns="content_type_id" />
+    </table>
+    <table name="django_content_type" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="app_label" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="model" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="content_type_id_refs_id_728de91f" columns="" />
+      <exported-key name="content_type_id_refs_id_288599e6" columns="" />
+      <index name="app_label" unique="true" columns="app_label,model" />
+    </table>
+    <table name="django_session" schema="" catalog="pyjama" type="TABLE">
+      <column name="session_key" sqlType="VARCHAR" length="40" precision="0" nullable="false" jdbcType="12" />
+      <column name="session_data" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="false" jdbcType="-1" />
+      <column name="expire_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="session_key" />
+      <index name="django_session_3da3d3d8" unique="false" columns="expire_date" />
+    </table>
+    <table name="django_site" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="domain" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="gerente_relatorio" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="data_inicio" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
+      <column name="data_final" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="gerente_tiporelatorio" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="projeto_cliente" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="foto" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <column name="status" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" />
+      <column name="data_criacao" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="cliente_id_refs_id_867c5a" columns="" />
+    </table>
+    <table name="projeto_comentario" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="descricaoComentario" sqlType="VARCHAR" length="1024" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="comentario_id_refs_id_600e259c" columns="" />
+      <exported-key name="comentario_id_refs_id_7e4a4eca" columns="" />
+    </table>
+    <table name="projeto_comentario_documentoanexo" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="comentario_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="documentocomentario_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="comentario_id_refs_id_600e259c" columns="comentario_id" ref-table="projeto_comentario" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="documentocomentario_id_refs_id_4fca3add" columns="documentocomentario_id" ref-table="projeto_documentocomentario" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="projeto_comentario_documentoAnexo_comentario_id_650bd0b_uniq" unique="true" columns="comentario_id,documentocomentario_id" />
+      <index name="projeto_comentario_documentoAnexo_1fa5c3d9" unique="false" columns="comentario_id" />
+      <index name="projeto_comentario_documentoAnexo_5bf811b6" unique="false" columns="documentocomentario_id" />
+    </table>
+    <table name="projeto_documentocomentario" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="caminho" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="documentocomentario_id_refs_id_4fca3add" columns="" />
+    </table>
+    <table name="projeto_documentotarefa" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="tarefa_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="caminho" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="tarefa_id_refs_id_33d5893a" columns="tarefa_id" ref-table="projeto_tarefa" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="projeto_documentotarefa_7626b649" unique="false" columns="tarefa_id" />
+    </table>
+    <table name="projeto_meta" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="descricao" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="true" jdbcType="-1" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="meta_id_refs_id_6acfcd67" columns="" />
+    </table>
+    <table name="projeto_prioridade" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="prioridade_id_refs_id_6583d9e7" columns="" />
+    </table>
+    <table name="projeto_projeto" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="cliente_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="descricao" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="true" jdbcType="-1" />
+      <column name="foto" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <column name="proprietario_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="status" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" />
+      <column name="data_criacao" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="cliente_id_refs_id_867c5a" columns="cliente_id" ref-table="projeto_cliente" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="proprietario_id_refs_id_5539e48e" columns="proprietario_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="projeto_id_refs_id_7076f86f" columns="" />
+      <index name="projeto_projeto_52f540a3" unique="false" columns="cliente_id" />
+      <index name="projeto_projeto_7ca8efb6" unique="false" columns="proprietario_id" />
+    </table>
+    <table name="projeto_reuniao" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="projeto_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="local" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="data_reuniao" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
+      <column name="hora_reuniao" sqlType="TIME" length="8" precision="0" nullable="false" jdbcType="92" />
+      <column name="titulo" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="duracao" sqlType="TIME" length="8" precision="0" nullable="false" jdbcType="92" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="projeto_id_refs_id_7076f86f" columns="projeto_id" ref-table="projeto_projeto" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="reuniao_id_refs_id_620e95b9" columns="" />
+      <exported-key name="reuniao_id_refs_id_13a1ef12" columns="" />
+      <index name="projeto_reuniao_316f8d9a" unique="false" columns="projeto_id" />
+    </table>
+    <table name="projeto_reuniao_participantes" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="reuniao_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="reuniao_id_refs_id_620e95b9" columns="reuniao_id" ref-table="projeto_reuniao" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="user_id_refs_id_182a7aa8" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="projeto_reuniao_participantes_reuniao_id_5f94c4f3_uniq" unique="true" columns="reuniao_id,user_id" />
+      <index name="projeto_reuniao_participantes_58041140" unique="false" columns="reuniao_id" />
+      <index name="projeto_reuniao_participantes_403f60f" unique="false" columns="user_id" />
+    </table>
+    <table name="projeto_reuniao_tarefas" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="reuniao_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="tarefa_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="reuniao_id_refs_id_13a1ef12" columns="reuniao_id" ref-table="projeto_reuniao" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="tarefa_id_refs_id_4c0f793f" columns="tarefa_id" ref-table="projeto_tarefa" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="projeto_reuniao_tarefas_reuniao_id_700fbf64_uniq" unique="true" columns="reuniao_id,tarefa_id" />
+      <index name="projeto_reuniao_tarefas_58041140" unique="false" columns="reuniao_id" />
+      <index name="projeto_reuniao_tarefas_7626b649" unique="false" columns="tarefa_id" />
+    </table>
+    <table name="projeto_statustarefa" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="status_id_refs_id_1d90e689" columns="" />
+    </table>
+    <table name="projeto_tarefa" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="descricao" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="false" jdbcType="-1" />
+      <column name="tipo_tarefa_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="status_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="prioridade_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="meta_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="proprietario_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="prazo" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="data_criacao" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="data_fechamento" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="meta_id_refs_id_6acfcd67" columns="meta_id" ref-table="projeto_meta" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="prioridade_id_refs_id_6583d9e7" columns="prioridade_id" ref-table="projeto_prioridade" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="proprietario_id_refs_id_7d220627" columns="proprietario_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="status_id_refs_id_1d90e689" columns="status_id" ref-table="projeto_statustarefa" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="tipo_tarefa_id_refs_id_63fa7787" columns="tipo_tarefa_id" ref-table="projeto_tipotarefa" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="tarefa_id_refs_id_33d5893a" columns="" />
+      <exported-key name="tarefa_id_refs_id_4c0f793f" columns="" />
+      <exported-key name="tarefa_id_refs_id_a912510" columns="" />
+      <exported-key name="tarefa_id_refs_id_34eb327e" columns="" />
+      <index name="projeto_tarefa_34aadab3" unique="false" columns="tipo_tarefa_id" />
+      <index name="projeto_tarefa_44224078" unique="false" columns="status_id" />
+      <index name="projeto_tarefa_72780c45" unique="false" columns="prioridade_id" />
+      <index name="projeto_tarefa_67fa0b45" unique="false" columns="meta_id" />
+      <index name="projeto_tarefa_7ca8efb6" unique="false" columns="proprietario_id" />
+    </table>
+    <table name="projeto_tarefa_comentario" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="tarefa_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="comentario_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="comentario_id_refs_id_7e4a4eca" columns="comentario_id" ref-table="projeto_comentario" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="tarefa_id_refs_id_a912510" columns="tarefa_id" ref-table="projeto_tarefa" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="projeto_tarefa_comentario_tarefa_id_66eb45e2_uniq" unique="true" columns="tarefa_id,comentario_id" />
+      <index name="projeto_tarefa_comentario_7626b649" unique="false" columns="tarefa_id" />
+      <index name="projeto_tarefa_comentario_1fa5c3d9" unique="false" columns="comentario_id" />
+    </table>
+    <table name="projeto_tarefa_responsavel" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="tarefa_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="tarefa_id_refs_id_34eb327e" columns="tarefa_id" ref-table="projeto_tarefa" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="user_id_refs_id_1f25f84c" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="pyjama" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="projeto_tarefa_responsavel_tarefa_id_4d10938_uniq" unique="true" columns="tarefa_id,user_id" />
+      <index name="projeto_tarefa_responsavel_7626b649" unique="false" columns="tarefa_id" />
+      <index name="projeto_tarefa_responsavel_403f60f" unique="false" columns="user_id" />
+    </table>
+    <table name="projeto_tipotarefa" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="nome" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="tipo_tarefa_id_refs_id_63fa7787" columns="" />
+    </table>
+    <table name="south_migrationhistory" schema="" catalog="pyjama" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="app_name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="migration" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="applied" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
   </data-source>
 </component>

@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-#
+from datetime import datetime
 import os
+from xmlrpclib import DateTime
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import TimeField
 from PyJaMa.settings import PROJETO_MEDIA
 
 class Cliente(models.Model):
@@ -24,24 +28,24 @@ class  Projeto(models.Model):
     status=models.BooleanField(blank=False,null=False)
     data_criacao=models.DateTimeField()
 
-class statusTarefa(models.Model):
+class StatusTarefa(models.Model):
     def __unicode__(self):
         return self.nome
 
     nome=models.CharField(max_length=255)
-    
+
 class Prioridade(models.Model):
     def __unicode__(self):
         return self.nome
 
     nome=models.CharField(max_length=255)
 
-class tipoTarefa(models.Model):
+class TipoTarefa(models.Model):
     def __unicode__(self):
         return self.nome
 
     nome=models.CharField(max_length=255,null=False)
-    
+
 class Meta(models.Model):
     def __unicode__(self):
         return self.nome
@@ -49,23 +53,38 @@ class Meta(models.Model):
     nome=models.CharField(max_length=255)
     descricao=models.TextField(null=True)
 
+class DocumentoComentario(models.Model):
+    def __unicode__(self):
+        return self.caminho
+
+    caminho=models.FileField("Documento",upload_to=os.path.join(PROJETO_MEDIA,"documentos"),null=True)
+
+
+class Comentario(models.Model):
+    def __unicode__(self):
+        return self.descricaoComentario
+
+    descricaoComentario=models.CharField(verbose_name="Descrição",max_length=1024,null=False,blank=False)
+    documentoAnexo=models.ManyToManyField(DocumentoComentario,verbose_name="Documentos em Anexo",related_name="doc +")
+
 class Tarefa(models.Model):
     def __unicode__(self):
         return self.nome
 
     nome=models.CharField(max_length=255)
     descricao=models.TextField()
-    tipo_tarefa=models.ForeignKey(tipoTarefa)
-    status=models.ForeignKey(statusTarefa)
+    tipo_tarefa=models.ForeignKey(TipoTarefa)
+    status=models.ForeignKey(StatusTarefa)
     prioridade=models.ForeignKey(Prioridade,null=True)
     meta=models.ForeignKey(Meta,null=True)
     responsavel=models.ManyToManyField(User,verbose_name="StakeHolders",related_name = 'resp +')
     proprietario=models.ForeignKey(User,related_name = 'prop +')
     prazo=models.DateTimeField(null=True)
+    comentario=models.ManyToManyField(Comentario,verbose_name="Notas sobre a tarefa",related_name="+coments")
     data_criacao=models.DateTimeField()
     data_fechamento=models.DateTimeField(null=True)
 
-class Documento(models.Model):
+class DocumentoTarefa(models.Model):
     def __unicode__(self):
         return self.nome
 
@@ -75,11 +94,14 @@ class Documento(models.Model):
 
 class Reuniao (models.Model):
     def __unicode__(self):
-        return self.local
+        return self.titulo
 
+    titulo=models.CharField(max_length=255,blank=False,null=False,default="titDefault")
     participantes=models.ManyToManyField(User,verbose_name="Participantes",related_name='part +')
     projeto=models.ForeignKey(Projeto,null=True)
     tarefas=models.ManyToManyField(Tarefa,verbose_name="Tarefas em Pauta",related_name='tar +',null=True)
-    local=models.CharField(max_length=255)
-    data_reuniao=models.DateField()
-    hora_reuniao=models.TimeField()
+    local=models.CharField(max_length=255,null=False)
+    data_reuniao=models.DateField(null=False)
+    hora_reuniao=models.TimeField(null=False)
+    duracao=models.TimeField(default=datetime.now().time)
+
