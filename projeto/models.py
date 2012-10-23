@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-#
 from datetime import datetime
 import os
-from xmlrpclib import DateTime
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import TimeField
 from PyJaMa.settings import PROJETO_MEDIA
 
 class Cliente(models.Model):
