@@ -1,12 +1,15 @@
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, authenticate
 from django.conf.urls import patterns, url
-from django.conf import settings
-from projeto.views import adicionar,index,lista
-from projeto.projeto_forms.formsTarefa import formStatusTarefa
+from projeto import views
+from projeto.projeto_forms.formsProjeto import formProjeto
+
 
 urlpatterns=patterns('',
-    url(r'^$', 'projeto.views.index', name='index'),
-    url(r'(?P<modelo>\w+)/listar/$','projeto.views.lista',name="Listar"),
-    url(r'(?P<nameForm>\w+)/adicionar/','projeto.views.adicionar',name="Adicionar"),
-    url(r'(?P<nameForm>\w+)/editar/(?P<id_pk>\d)','projeto.views.editar',name="Editar"),
-    url(r'(?P<modelo>\w+)/excluir/(?P<id_pk>\d)','projeto.views.excluir',name="Excluir"),
+    url(r'^$', 'projeto.views.index'),
+    url(r'(?P<modelo>\w+)/listar/$','projeto.views.lista'),
+    url(r'(?P<nameForm>\w+)/adicionar/','projeto.views.adicionar'),
+    url(r'(?P<nameForm>\w+)/editar/(?P<id_pk>\d)','projeto.views.editar'),
+    url(r'(?P<modelo>\w+)/excluir/(?P<id_pk>\d)','projeto.views.excluir'),
+    url(r'(?P<modelo>\w+)/detalhe/(?P<id_pk>\d)','projeto.views.detalhe'),
 )

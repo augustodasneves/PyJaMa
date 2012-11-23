@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a5c64e-b7c8-49fd-9c17-9fa332cf242a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyJaMa" afterPath="$PROJECT_DIR$/PyJaMa" />
+    <list default="true" id="86a5c64e-b7c8-49fd-9c17-9fa332cf242a" name="Default" comment="fix editar&#10;new views methods&#10;working full orm">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projeto/templates/deslogado.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projeto/templates/detalhe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projeto/templates/logado.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projeto/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gerente/urls.py" afterPath="$PROJECT_DIR$/gerente/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projeto/projeto_forms/formsProjeto.py" afterPath="$PROJECT_DIR$/projeto/projeto_forms/formsProjeto.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projeto/projeto_forms/formsTarefa.py" afterPath="$PROJECT_DIR$/projeto/projeto_forms/formsTarefa.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projeto/templates/base.html" afterPath="$PROJECT_DIR$/projeto/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projeto/urls.py" afterPath="$PROJECT_DIR$/projeto/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projeto/views.py" afterPath="$PROJECT_DIR$/projeto/views.py" />
     </list>
     <ignored path="PyJaMa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +39,58 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projeto/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="8" selection-start="2284" selection-end="2284" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logado.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projeto/templates/logado.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="16" selection-start="0" selection-end="75" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deslogado.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projeto/templates/deslogado.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="19" selection-start="63" selection-end="63" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projeto/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="70" selection-start="171" selection-end="171" vertical-scroll-proportion="-2.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PyJaMa/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="20" selection-start="2314" selection-end="2314" vertical-scroll-proportion="0.55333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projeto/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="46" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state line="13" column="74" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,39 +98,8 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyJaMa/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+            <state line="14" column="39" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projeto/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="44" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.9170732">
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formsProjeto.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projeto/projeto_forms/formsProjeto.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projeto/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#25#54#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -96,30 +121,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/gerente/models.py" />
-        <option value="$PROJECT_DIR$/projeto/projeto_forms/formsProjeto.py" />
-        <option value="$PROJECT_DIR$/projeto/templates/adicionar.html" />
-        <option value="$PROJECT_DIR$/PyJaMa/admin/base_site.html" />
-        <option value="$PROJECT_DIR$/gerente/urls.py" />
-        <option value="$PROJECT_DIR$/projeto/migrations/0002_auto__add_field_reuniao_titulo__add_field_reuniao_duracao.py" />
-        <option value="$PROJECT_DIR$/projeto/templates/salvo.html" />
-        <option value="db-console:/565092e4/58e7abe8-4dc2-44d4-9e93-64a606295c0f/" />
-        <option value="$PROJECT_DIR$/projeto/templates/lista.html" />
-        <option value="$PROJECT_DIR$/projeto/templates/excluido.html" />
-        <option value="$PROJECT_DIR$/PyJaMa/urls.py" />
         <option value="$PROJECT_DIR$/projeto/admin.py" />
-        <option value="$PROJECT_DIR$/projeto/projeto_forms/formsTarefa.py" />
-        <option value="$PROJECT_DIR$/projeto/urls.py" />
+        <option value="$PROJECT_DIR$/build/django/django/core/urlresolvers.py" />
         <option value="$PROJECT_DIR$/projeto/models.py" />
+        <option value="$PROJECT_DIR$/gerente/urls.py" />
+        <option value="$PROJECT_DIR$/projeto/projeto_forms/formsProjeto.py" />
+        <option value="$PROJECT_DIR$/projeto/templates/detalhe.html" />
+        <option value="$PROJECT_DIR$/PyJaMa/urlsAccount.py" />
+        <option value="$PROJECT_DIR$/projeto/projeto_forms/formsTarefa.py" />
+        <option value="$PROJECT_DIR$/projeto/templates/login.html" />
+        <option value="$PROJECT_DIR$/projeto/urls.py" />
+        <option value="$PROJECT_DIR$/PyJaMa/urls.py" />
         <option value="$PROJECT_DIR$/projeto/views.py" />
+        <option value="$PROJECT_DIR$/projeto/templates/logado.html" />
+        <option value="$PROJECT_DIR$/projeto/templates/deslogado.html" />
+        <option value="$PROJECT_DIR$/projeto/templates/base.html" />
+        <option value="$PROJECT_DIR$/PyJaMa/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="40" />
-    <option name="width" value="1288" />
-    <option name="height" value="764" />
+    <option name="x" value="-1" />
+    <option name="y" value="-4" />
+    <option name="width" value="1282" />
+    <option name="height" value="805" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -147,7 +172,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -158,106 +182,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (C:/Program Files/python/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyJaMa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (C:/Program Files/python/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyJaMa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (C:/Program Files/python/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyJaMa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (C:/Program Files/python/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyJaMa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.3 (C:/Program Files/python/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -330,36 +254,133 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="gerente" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyJaMa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <PyConsoleSettings />
+      <PyConsoleSettings>
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="PyJaMa" />
+      </PyConsoleSettings>
     </option>
     <option name="myDjangoConsoleState">
-      <PyConsoleSettings />
+      <PyConsoleSettings>
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="PyJaMa" />
+      </PyConsoleSettings>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projeto/templates" />
+      <recent name="$PROJECT_DIR$/PyJaMa" />
       <recent name="C:\Users\Augusto\workspace\PyJaMa\projeto\templates" />
     </key>
   </component>
@@ -377,26 +398,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <option name="MULTIPROCESS" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="PyJaMa" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -418,6 +419,25 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="PyJaMa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -464,7 +484,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:/Program Files/python/python.exe" />
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <module name="PyJaMa" />
@@ -477,7 +497,9 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="schemamigration projeto --auto" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -537,30 +559,50 @@
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="40" width="1288" height="764" extended-state="6" />
+    <frame x="-1" y="-4" width="1282" height="805" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.49675852" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23419774" sideWeight="0.7585089" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1761827" sideWeight="0.46633825" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24554294" sideWeight="0.7585089" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.49756888" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24149108" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.49675852" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2334764" sideWeight="0.7585089" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1944223" sideWeight="0.795107" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25772357" sideWeight="0.77623457" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3970588" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29026702" sideWeight="0.44107744" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.49756888" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22376543" sideWeight="0.998374" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30377668" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273906" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -619,167 +661,128 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/565092e4/58e7abe8-4dc2-44d4-9e93-64a606295c0f/">
+    <entry file="uml://DjangoModelDependency/#PyJaMa">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#PyJaMa</OriginalElement>
+          <nodes>
+            <node x="" y="">projeto.models.Prioridade</node>
+            <node x="" y="">projeto.models.DocumentoTarefa</node>
+            <node x="" y="">projeto.models.Cliente</node>
+            <node x="" y="">projeto.models.Tarefa</node>
+            <node x="" y="">projeto.models.Reuniao</node>
+            <node x="" y="">projeto.models.Meta</node>
+            <node x="" y="">projeto.models.Comentario</node>
+            <node x="" y="">django.contrib.auth.models.Group</node>
+            <node x="" y="">projeto.models.TipoTarefa</node>
+            <node x="" y="">django.contrib.auth.models.Permission</node>
+            <node x="" y="">projeto.models.DocumentoComentario</node>
+            <node x="" y="">projeto.models.Projeto</node>
+            <node x="" y="">projeto.models.StatusTarefa</node>
+            <node x="" y="">django.contrib.auth.models.User</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="402.0" y="142.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto/templates/adicionar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gerente/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="5" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projeto/admin.py">
+    <entry file="file://$PROJECT_DIR$/projeto/templates/detalhe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="37" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.south_migrationhistory">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.south_migrationhistory</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.south_migrationhistory</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-55.0" y="26.0" />
-          <SelectedNodes>
-            <node>58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.south_migrationhistory</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/58e7abe8-4dc2-44d4-9e93-64a606295c0f.schema:pyjama">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>58e7abe8-4dc2-44d4-9e93-64a606295c0f.schema:pyjama</OriginalElement>
-          <nodes>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_tipotarefa</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_prioridade</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.auth_permission</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.auth_group_permissions</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.django_admin_log</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.gerente_tiporelatorio</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_reuniao_tarefas</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.auth_user_user_permissions</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.auth_group</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_tarefa_comentario</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.gerente_relatorio</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.django_session</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_statustarefa</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_comentario_documentoanexo</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_reuniao</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.south_migrationhistory</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_reuniao_participantes</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.auth_user_groups</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_documentotarefa</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_projeto</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.auth_user</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.django_site</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_meta</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_documentocomentario</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_tarefa</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.django_content_type</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_tarefa_responsavel</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_cliente</node>
-            <node x="" y="">58e7abe8-4dc2-44d4-9e93-64a606295c0f.table:pyjama.projeto_comentario</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8436083408884861" x="437.0" y="864.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto/projeto_forms/formsTarefa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="152" selection-end="152" vertical-scroll-proportion="0.03837472" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto/templates/lista.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="90" selection-end="90" vertical-scroll-proportion="0.12230216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto/templates/salvo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="21" selection-start="63" selection-end="63" vertical-scroll-proportion="0.08153477" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto/templates/excluido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/python/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="32" selection-start="19043" selection-end="19043" vertical-scroll-proportion="0.45609757">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="2" column="11" selection-start="55" selection-end="55" vertical-scroll-proportion="0.048387095" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#25#54#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="12" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.023291925" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto/projeto_forms/formsProjeto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto/projeto_forms/formsTarefa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="77" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.86024845" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="27" selection-start="358" selection-end="358" vertical-scroll-proportion="0.29032257" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state line="13" column="74" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyJaMa/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+        <state line="14" column="39" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="44" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.9170732">
+        <state line="74" column="8" selection-start="2284" selection-end="2284" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto/templates/logado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="16" selection-start="0" selection-end="75" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto/templates/deslogado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="19" selection-start="63" selection-end="63" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="70" selection-start="171" selection-end="171" vertical-scroll-proportion="-2.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyJaMa/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="20" selection-start="2314" selection-end="2314" vertical-scroll-proportion="0.55333334">
+          <folding />
         </state>
       </provider>
     </entry>

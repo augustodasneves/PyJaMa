@@ -1,15 +1,13 @@
-from urllib2 import parse_keqv_list
-from django.core.serializers import serialize
-from django.forms import model_to_dict
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import logout as auth_logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from models import *
 from projeto_forms.formsTarefa import *
 from projeto_forms.formsProjeto import *
-
-def index(request):
-    return HttpResponse("teste")
 
 '''TAREFA'''
 def adicionar(request,nameForm):
@@ -28,6 +26,7 @@ def adicionar(request,nameForm):
 
     return render_to_response('adicionar.html',{'form':form},context_instance=RequestContext(request))
 
+@login_required
 def lista(request,modelo):
     try:
         modelo=eval(modelo)
@@ -61,11 +60,32 @@ def editar(request,nameForm,id_pk):
         form=nameForm(dadosForm)
     return render_to_response('adicionar.html',{'form':form},context_instance=RequestContext(request))
 
-def excluir(request,modelo,id_pk):
+def detalhe(request,modelo,id_pk):
     try:
         objModelo=eval(modelo)
-        objModelo=objModelo.objects.get(pk=id_pk).delete()
+        dadosModelo=objModelo.objects.get(pk=id_pk).__dict__
     except:
         raise Http404
 
-    return render_to_response('excluido.html')
+    return render_to_response('detalhe.html',{'item':dadosModelo})
+
+def login(request):
+    if request.method=="POST":
+        formautenticado=AuthenticationForm(data=request.POST)
+        if formautenticado.is_valid():
+            usuario=authenticate(username=request.POST['username'],password=request.POST['password'])
+            if usuario is not None:
+                if usuario.is_active:
+                    auth_login(request,usuario)
+                    return render_to_response('logado.html',{})
+                else:
+                    return render_to_response('salvo.html',{})
+            else:
+                return render_to_response('excluido.html')
+    else:
+        form=AuthenticationForm(request)
+        return render_to_response('login.html',{'form':form},context_instance=RequestContext(request))
+
+def logout(request):
+    auth_logout(request)
+    return render_to_response('deslogado.html',{})
