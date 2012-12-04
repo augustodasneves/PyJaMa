@@ -6,25 +6,25 @@ from django.contrib.auth.models import User
 from PyJaMa.settings import PROJETO_MEDIA
 
 class Cliente(models.Model):
-    def __unicode__(self):
-        return self.nome
-
     nome=models.CharField(max_length=255)
     foto=models.ImageField("Logo Cliente",upload_to=os.path.join(PROJETO_MEDIA,"cliente"),blank=True,null=True)
     status=models.BooleanField(blank=False,null=False)
-    data_criacao=models.DateTimeField()
+    data_criacao=models.DateTimeField(verbose_name="Data de Criação")
 
-class  Projeto(models.Model):
     def __unicode__(self):
         return self.nome
 
+class  Projeto(models.Model):
     cliente=models.ForeignKey(Cliente)
     nome=models.CharField(max_length=255)
-    descricao=models.TextField(null=True)
+    descricao=models.TextField(null=True,verbose_name="Descrição")
     foto=models.ImageField("Logo Projeto",upload_to=os.path.join(PROJETO_MEDIA,"projeto"),blank=True,null=True)
-    proprietario=models.ForeignKey(User)
+    proprietario=models.ForeignKey(User,verbose_name="Proprietário")
     status=models.BooleanField(blank=False,null=False)
-    data_criacao=models.DateTimeField()
+    data_criacao=models.DateTimeField(verbose_name="Data de Criação")
+
+    def __unicode__(self):
+        return self.nome
 
 class StatusTarefa(models.Model):
     def __unicode__(self):
@@ -45,61 +45,62 @@ class TipoTarefa(models.Model):
     nome=models.CharField(max_length=255,null=False)
 
 class Meta(models.Model):
+    nome=models.CharField(max_length=255)
+    descricao=models.TextField(null=True,verbose_name="Descrição")
+
     def __unicode__(self):
         return self.nome
 
-    nome=models.CharField(max_length=255)
-    descricao=models.TextField(null=True)
-
 class DocumentoComentario(models.Model):
+    caminho=models.FileField("Documento",upload_to=os.path.join(PROJETO_MEDIA,"documentos"),null=True)
+
     def __unicode__(self):
         return self.caminho
 
-    caminho=models.FileField("Documento",upload_to=os.path.join(PROJETO_MEDIA,"documentos"),null=True)
-
 
 class Comentario(models.Model):
+    descricaoComentario=models.CharField(verbose_name="Descrição",max_length=1024,null=False,blank=False)
+    documentoAnexo=models.ManyToManyField(DocumentoComentario,verbose_name="Documentos em Anexo",related_name="doc +",null=True,blank=True)
+
     def __unicode__(self):
         return self.descricaoComentario
 
-    descricaoComentario=models.CharField(verbose_name="Descrição",max_length=1024,null=False,blank=False)
-    documentoAnexo=models.ManyToManyField(DocumentoComentario,verbose_name="Documentos em Anexo",related_name="doc +")
-
 class Tarefa(models.Model):
-    def __unicode__(self):
-        return self.nome
-
     nome=models.CharField(max_length=255)
-    descricao=models.TextField()
-    tipo_tarefa=models.ForeignKey(TipoTarefa)
-    status=models.ForeignKey(StatusTarefa)
+    descricao=models.TextField(verbose_name="Descrição")
+    tipo_tarefa=models.ForeignKey(TipoTarefa,verbose_name="Tipo da Tarefa")
+    status=models.ForeignKey(StatusTarefa,editable=False)
     prioridade=models.ForeignKey(Prioridade,null=True)
     meta=models.ForeignKey(Meta,null=True)
-    responsavel=models.ManyToManyField(User,verbose_name="StakeHolders",related_name = 'resp +')
+    responsavel=models.ManyToManyField(User,verbose_name="Responsaveis",related_name = 'resp +')
     proprietario=models.ForeignKey(User,related_name = 'prop +')
-    prazo=models.DateTimeField(null=True)
-    comentario=models.ManyToManyField(Comentario,verbose_name="Notas sobre a tarefa",related_name="+coments")
-    data_criacao=models.DateTimeField()
-    data_fechamento=models.DateTimeField(null=True)
+    prazo=models.DateTimeField(null=True,verbose_name="Prazo de Entrega")
+    comentario=models.ManyToManyField(Comentario,verbose_name="Comentários sobre a tarefa",related_name="+coments")
+    data_criacao=models.DateTimeField(verbose_name="Data de Criação")
+    data_fechamento=models.DateTimeField(null=True,verbose_name="Data de Conclusão")
 
-class DocumentoTarefa(models.Model):
     def __unicode__(self):
         return self.nome
 
+class DocumentoTarefa(models.Model):
     tarefa=models.ForeignKey(Tarefa,null=True,blank=True)
     nome=models.CharField(max_length=255)
     caminho=models.FileField("Documento",upload_to=os.path.join(PROJETO_MEDIA,"documentos"),null=True)
 
-class Reuniao (models.Model):
     def __unicode__(self):
-        return self.titulo
+        return self.nome
 
-    titulo=models.CharField(max_length=255,blank=False,null=False,default="titDefault")
+class Reuniao (models.Model):
+    titulo=models.CharField(max_length=255,blank=False,null=False,default="Reunião para ",verbose_name="Finalidade")
     participantes=models.ManyToManyField(User,verbose_name="Participantes",related_name='part +')
     projeto=models.ForeignKey(Projeto,null=True)
     tarefas=models.ManyToManyField(Tarefa,verbose_name="Tarefas em Pauta",related_name='tar +',null=True)
     local=models.CharField(max_length=255,null=False)
-    data_reuniao=models.DateField(null=False)
-    hora_reuniao=models.TimeField(null=False)
-    duracao=models.TimeField(default=datetime.now().time)
+    data_reuniao=models.DateField(null=False,verbose_name="Data da Reunião")
+    hora_reuniao=models.TimeField(null=False,verbose_name="Horário da Reunião")
+    duracao=models.TimeField(default=datetime.now().time,verbose_name="Duração")
+
+
+    def __unicode__(self):
+        return self.titulo
 

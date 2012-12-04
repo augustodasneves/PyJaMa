@@ -1,3 +1,4 @@
+import django.contrib.admin
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from projeto.models import Projeto, Cliente, Reuniao

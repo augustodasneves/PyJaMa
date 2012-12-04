@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
+{% block cabecalho %}
+{% endblock %}
 {% block corpo %}
+    <div class="row-fluid show-grid">
+    <div style="float:right !important;cursor:pointer;" onclick="javascript:history.back(-1);">Voltar</div>
+        <div class="span12">
     {% for item in itens %}
-        <p>{{ item  }}</p>
+
+            {{ item }} <a href="/projeto/{{ modelo }}/editar/{{ item.id }}">Editar</a> <a href="/projeto/{{ modelo }}/excluir/{{ item.id }}">Excluir</a><br/>
+            {%empty%}
+            Sem items na lista
     {% endfor %}
+        </div>
+    </div>
 {% endblock %}

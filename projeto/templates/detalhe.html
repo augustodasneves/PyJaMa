@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
 {% block corpo %}
-    {{ item }}
+    {%  for i in item %}
+            {{ i }} - {{ i. }}
+    {%  endfor %}
 {% endblock %}

@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
+{% block cabecalho %}
+{% endblock %}
 {% block corpo %}
-<!--<h2>Login</h2>
-<form method="post" action="projeto/login/">
-    <input type="text" name="username"/>
-    <input type="password" name="password"/>
-    <input type="button" value="Logar">
-
-</form>!-->
-    <form action="" method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="submit" value="Login"/>
-    </form>
+    <div class="container">
+        <div style="margin:0px auto !important;width: 220px;">
+            <form action="" method="post" class="form-signin">
+                {{ form.as_p }}
+                {{ erros }}
+                <br/>
+                {% csrf_token %}
+                <input type="submit" value="Login" class="btn" />
+            </form>
+        </div>
+    </div>
 {% endblock %}

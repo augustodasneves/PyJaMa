@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
 {% block corpo %}
-    <form action="" method="post">
+    <div style="float:right !important;cursor:pointer;" onclick="javascript:history.back(-1);">Voltar</div>
+    <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit">Adiciona </button>

@@ -1,14 +1,155 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="{{ PROJETO }}bootstrap/js/bootstrap.min.js"></script>
-    <link href="{{ PROJETO }}bootstrap/css/bootstrap-responsive.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ MEDIA_URL }}bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}bootstrap/css/bootstrap-responsive.css"/>
+    <script src="{{ MEDIA_URL }}bootstrap/js/jquery-1.8.3.min.js"></script>
+    <script src="{{ MEDIA_URL }}bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ MEDIA_URL }}bootstrap/js/bootstrap-collapse.js"></script>
     {% block cabecalho %}
         <title></title>
     {% endblock %}
 </head>
 <body>
-    {% block corpo %}
-    {% endblock %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">PyTaMa</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="/projeto/Tarefa/listar/">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Cliente
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/projeto/Cliente/listar/">Listar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/projeto/Cliente/adicionar/">Adicionar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Usuário
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/projeto/User/listar/">Listar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/projeto/User/adicionar/">Adicionar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Projeto
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/projeto/Projeto/listar/">Listar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/projeto/Projeto/adicionar/">Adicionar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Meta
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/projeto/Meta/listar/">Listar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/projeto/Meta/adicionar/">Adicionar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Comentário
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/projeto/Comentario/listar/">Listar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/projeto/Comentario/adicionar/">Adicionar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reunião
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/projeto/Reuniao/listar/">Listar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/projeto/Reuniao/adicionar/">Adicionar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="navbar-text pull-right" style="line-height: 24px !important;">
+                    {% if user.is_anonymous %}
+                        <a href="/login/" class="navbar-link">
+                            Logar
+                        </a>
+                    {% else %}
+                        Você está logado como
+                        <a href="#" class="navbar-link">
+                            {{ user.username }}
+                        </a>
+                        <br/>
+                        <a href="/logout/" class="navbar-link">
+                            Deslogar
+                        </a>
+                    {% endif %}
+                    </a>
+                </p>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid" style="margin-top: 5%;">
+            {% block corpo %}
+            {% endblock %}
+    </div>
+    <hr/>
+    <footer>
+        <p>© PyTaMa - Augusto das Neves</p>
+    </footer>
+</div>
+
 </body>
 </html>
