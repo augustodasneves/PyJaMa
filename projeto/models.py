@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-#
 from datetime import datetime
+from django import forms
 import os
 from django.db import models
 from django.contrib.auth.models import User
@@ -20,7 +21,7 @@ class  Projeto(models.Model):
     descricao=models.TextField(null=True,verbose_name="Descrição")
     foto=models.ImageField("Logo Projeto",upload_to=os.path.join(PROJETO_MEDIA,"projeto"),blank=True,null=True)
     proprietario=models.ForeignKey(User,verbose_name="Proprietário")
-    status=models.BooleanField(blank=False,null=False)
+    status=models.BooleanField(blank=False,null=False,verbose_name="Status")
     data_criacao=models.DateTimeField(verbose_name="Data de Criação")
 
     def __unicode__(self):

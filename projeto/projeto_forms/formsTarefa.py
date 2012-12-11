@@ -9,6 +9,10 @@ from projeto.models import Tarefa, StatusTarefa, Prioridade, TipoTarefa, Meta, D
 class formTarefa(forms.ModelForm):
     class Meta():
         model=Tarefa
+        widgets = {
+            'yes_or_no': forms.RadioSelect
+        }
+
 
 class formStatusTarefa(forms.ModelForm):
     class Meta():
