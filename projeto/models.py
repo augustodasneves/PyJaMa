@@ -47,6 +47,7 @@ class TipoTarefa(models.Model):
 class Meta(models.Model):
     nome=models.CharField(max_length=255)
     descricao=models.TextField(null=True,verbose_name="Descrição")
+    data_maxima=models.DateField(null=False,default=datetime.now().date(), verbose_name="Prazo final")
 
     def __unicode__(self):
         return self.nome

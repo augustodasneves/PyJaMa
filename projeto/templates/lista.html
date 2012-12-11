@@ -9,7 +9,8 @@
 
             {{ item }} <a href="/projeto/{{ modelo }}/editar/{{ item.id }}">Editar</a> <a href="/projeto/{{ modelo }}/excluir/{{ item.id }}">Excluir</a><br/>
             {%empty%}
-            Sem items na lista
+            Sem items na lista<br/>
+            <a href="/projeto/{{ modelo }}/adicionar/">Cadastrar novo Item</a>
     {% endfor %}
         </div>
     </div>

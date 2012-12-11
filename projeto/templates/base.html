@@ -125,7 +125,7 @@
                         </a>
                     {% else %}
                         Você está logado como
-                        <a href="#" class="navbar-link">
+                        <a href="/projeto/User/editar/{{ user.id }}" class="navbar-link">
                             {{ user.username }}
                         </a>
                         <br/>
@@ -141,9 +141,12 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row-fluid" style="margin-top: 5%;">
+    <div class="row-fluid" style="padding-top: 5%;">
+        <div class="conteudo">
             {% block corpo %}
+
             {% endblock %}
+        </div>
     </div>
     <hr/>
     <footer>
