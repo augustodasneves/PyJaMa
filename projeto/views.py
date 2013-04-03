@@ -14,6 +14,16 @@ from projeto_forms.formsTarefa import *
 from projeto_forms.formsProjeto import *
 import reportlab
 
+'''HOME DASHBOARD'''
+@login_required
+def home(request):
+    try:
+        allTarefas=Tarefa.objects.all()
+        return render_to_response('home.html',{'tarefas':allTarefas},context_instance=RequestContext(request))
+    except:
+        raise Http404
+
+
 '''TAREFA'''
 @login_required
 def adicionar(request,nameForm):
@@ -57,7 +67,10 @@ def editar(request,nameForm,id_pk):
         objEdicao=eval(nameForm)
         objEdita=objEdicao.objects.get(pk=id_pk)
         objEdicao=objEdicao.objects.get(pk=id_pk).__dict__
-        nameForm=eval('form'+nameForm)
+        if(nameForm!="User"):
+            nameForm=eval('form'+nameForm)
+        else:
+            nameForm=eval('form'+nameForm+"Editar")
     except BaseException:
         raise Http404
     if request.method=="POST":
@@ -91,7 +104,7 @@ def login(request):
                     if "next" in request.GET.keys():
                         return redirect_to(request,request.GET['next'])
                     else:
-                        return direct_to_template(request,'logado.html',{},context_instance = RequestContext(request))
+                        return redirect_to(request,'/projeto/home')
                 else:
                     return direct_to_template(request,'deslogado.html',{},context_instance = RequestContext(request))
             else:
@@ -118,7 +131,7 @@ def index(request):
 @login_required
 def relatoriogeral(request,modelo):
     response = HttpResponse(mimetype='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="somefilename.pdf"'
+    response['Content-Disposition'] = 'attachment; filename="'+modelo+'.pdf"'
 
     p = canvas.Canvas(response)
 

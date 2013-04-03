@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block cabecalho %}
+{% endblock %}
+{% block corpo %}
+    <div class="row-fluid show-grid">
+        <div style="float:right !important;cursor:pointer;" onclick="javascript:history.back(-1);">Voltar</div>
+        <div class="span12">
+            {% for tarefa in tarefas %}
+                {{ tarefa.nome }}
+                <a href="/projeto/Tarefa/editar/{{ tarefa.id }}">Editar</a>
+                <a href="/projeto/Tarefa/excluir/{{ tarefa.id }}">Excluir</a>
+                <br/>
+            {%empty%}
+                Sem items na lista
+                <br/>
+                <a href="/projeto/tarefa/adicionar/">Cadastrar novo Item</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

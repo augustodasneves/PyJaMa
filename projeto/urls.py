@@ -7,6 +7,7 @@ from projeto.projeto_forms.formsProjeto import formProjeto
 
 urlpatterns=patterns('',
     url(r'^$','projeto.views.index',name="home"),
+    url(r'^home$','projeto.views.home',name="home"),
     url(r'(?P<modelo>\w+)/listar/$','projeto.views.lista'),
     url(r'(?P<nameForm>\w+)/adicionar/','projeto.views.adicionar'),
     url(r'(?P<nameForm>\w+)/editar/(?P<id_pk>\d+)','projeto.views.editar'),

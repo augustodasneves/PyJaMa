@@ -1,4 +1,5 @@
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.admin.helpers import AdminForm
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm, ReadOnlyPasswordHashField
 import django.contrib.auth
 import django
 from django import forms
@@ -45,8 +46,12 @@ class formComentario(forms.ModelForm):
 class formUser(forms.ModelForm):
     class Meta():
         model=User
-        fields = ('first_name', 'last_name', 'username', 'email')
-        exclude = ('is_staff', 'is_active', 'password', 'date_joined', 'last_login')
+        fields = ('first_name', 'last_name', 'username', 'email','password')
+        exclude = ('is_staff', 'is_active', 'date_joined', 'last_login')
+
+class formUserEditar(UserChangeForm):
+    class Meta():
+        fields = ('first_name', 'last_name', 'username', 'email','password')
 
 class formLogin(AuthenticationForm):
     username = forms.CharField(widget=TextInput(attrs={'Label':'Usuario'}))
